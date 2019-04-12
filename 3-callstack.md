@@ -115,7 +115,7 @@ It sounds complicated at first, but after some practice you'll find it's not so 
   const return_val = a_word("u", /* fill this in */);
   console.assert(return_val === 'tour', "wu-2: return_val === " + return_val);
 };
-``
+```
 
 [TOP](#sentences)
 
