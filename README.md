@@ -4,8 +4,8 @@ Some exercises to help understand functions
 
 ### Index
 * [functions](./1-functions.md)
-* [behavior](./2-turtle-shuffle.md)
-* [callstack](./2-sentences.md)
+* [behavior](./2-behavior.md)
+* [callstack](./3-callstack.md)
 
 ___
 ___
