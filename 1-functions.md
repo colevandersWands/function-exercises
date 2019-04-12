@@ -131,77 +131,73 @@ some exercises to help you understand functions:
 
 ### 5
 
-[on pytut](http://www.pythontutor.com/javascript.html#code=function%20f%28param_1%2C%20param_2%2C%20param_3%29%20%7B%0A%20%20var%20result%20%3D%20param_3%20%2B%20param_1%20%2B%20param_2%3B%0A%20%20return%20result%3B%0A%7D%3B%0A%0A%2F%2F%20set%20values%20in%20the%20args%20to%20pass%20the%20assert%0Alet%20x%20%3D%20%22x%22%2C%20y%20%3D%20%22y%22%2C%20z%20%3D%20%22z%22%3B%0Alet%20return_val%20%3D%20f%28%2F*%20pass%20x%2C%20y%20%26%20z%20in%20the%20right%20order%20*%2F%29%3B%0A%0Aconsole.assert%28return_val%20%3D%3D%3D%20%22xyz%22%2C%20%22return_val%20%3D%3D%3D%20%22%20%2B%20return_val%29%3B&mode=edit&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)  
-[parsonized](http://janke-learning.github.io/parsonizer/?snippet=function%20f%28param_1%2C%20param_2%2C%20param_3%29%20%7B%0A%20%20var%20result%20%3D%20param_3%20%2B%20param_1%20%2B%20param_2%3B%0A%20%20return%20result%3B%0A%7D%3B%0A%0A%2F%2F%20set%20values%20in%20the%20args%20to%20pass%20the%20assert%0Alet%20x%20%3D%20%22x%22%2C%20y%20%3D%20%22y%22%2C%20z%20%3D%20%22z%22%3B%0Alet%20return_val%20%3D%20f%28%2F*%20pass%20x%2C%20y%20%26%20z%20in%20the%20right%20order%20*%2F%29%3B%0A%0Aconsole.assert%28return_val%20%3D%3D%3D%20%22xyz%22%2C%20%22return_val%20%3D%3D%3D%20%22%20%2B%20return_val%29%3B)  
+[on pytut](http://www.pythontutor.com/javascript.html#code=function%20f%28param_1%2C%20param_2%2C%20param_3%29%20%7B%0A%20var%20result%20%3D%20param_3%20%2B%20param_1%20%2B%20param_2%3B%0A%20return%20result%3B%0A%7D%3B%0A%0Alet%20x%20%3D%20%22x%22%2C%20y%20%3D%20%22y%22%2C%20z%20%3D%20%22z%22%3B%0Alet%20return_val%20%3D%20f%28%2F*%20pass%20x%2C%20y%20%26%20z%20in%20the%20right%20order%20*%2F%29%3B%0A%0Aconsole.assert%28return_val%20%3D%3D%3D%20%22xyz%22%2C%20%225%3A%20return_val%20%3D%3D%3D%20%22%20%2B%20return_val%29%3B&curInstr=0&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)   
+[parsonized](http://janke-learning.github.io/parsonizer/?snippet=function%20f%28param_1%2C%20param_2%2C%20param_3%29%20%7B%0A%20var%20result%20%3D%20param_3%20%2B%20param_1%20%2B%20param_2%3B%0A%20return%20result%3B%0A%7D%3B%0A%0Alet%20x%20%3D%20%22x%22%2C%20y%20%3D%20%22y%22%2C%20z%20%3D%20%22z%22%3B%0Alet%20return_val%20%3D%20f%28%2F*%20pass%20x%2C%20y%20%26%20z%20in%20the%20right%20order%20*%2F%29%3B%0A%0Aconsole.assert%28return_val%20%3D%3D%3D%20%22xyz%22%2C%20%225%3A%20return_val%20%3D%3D%3D%20%22%20%2B%20return_val%29%3B)  
 ```js
 {  // 5
-  function f(param_1, param_2, param_3) {
+   function f(param_1, param_2, param_3) {
     var result = param_3 + param_1 + param_2;
     return result;
-  };
+   };
 
-  // set values in the args to pass the assert
-  let x = "x", y = "y", z = "z";
-  let return_val = f(/* pass x, y & z in the right order */);
+   let x = "x", y = "y", z = "z";
+   let return_val = f(/* pass x, y & z in the right order */);
 
-  console.assert(return_val === "xyz", "5: return_val === " + return_val);
+   console.assert(return_val === "xyz", "5: return_val === " + return_val);
 }
 ```
 
 ### 6
 
-[on pytut](http://www.pythontutor.com/javascript.html#code=function%20f%28param_1%2C%20param_2%2C%20param_3%29%20%7B%0A%20%20var%20result%20%3D%20param_2%20%2B%20param_1%20%2B%20param_3%3B%0A%20%20return%20result%3B%0A%7D%3B%0A%0A%2F%2F%20set%20values%20in%20the%20args%20to%20pass%20the%20assert%0Alet%20x%20%3D%20%22x%22%2C%20y%20%3D%20%22y%22%2C%20z%20%3D%20%22z%22%3B%0Alet%20return_val%20%3D%20f%28%2F*%20pass%20x%2C%20y%20%26%20z%20in%20the%20right%20order%20*%2F%29%3B%0A%0Aconsole.assert%28return_val%20%3D%3D%3D%20%22xzy%22%2C%20%22return_val%20%3D%3D%3D%20%22%20%2B%20return_val%29%3B&mode=edit&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)  
-[parsonized](http://janke-learning.github.io/parsonizer/?snippet=function%20f%28param_1%2C%20param_2%2C%20param_3%29%20%7B%0A%20%20var%20result%20%3D%20param_2%20%2B%20param_1%20%2B%20param_3%3B%0A%20%20return%20result%3B%0A%7D%3B%0A%0A%2F%2F%20set%20values%20in%20the%20args%20to%20pass%20the%20assert%0Alet%20x%20%3D%20%22x%22%2C%20y%20%3D%20%22y%22%2C%20z%20%3D%20%22z%22%3B%0Alet%20return_val%20%3D%20f%28%2F*%20pass%20x%2C%20y%20%26%20z%20in%20the%20right%20order%20*%2F%29%3B%0A%0Aconsole.assert%28return_val%20%3D%3D%3D%20%22xzy%22%2C%20%22return_val%20%3D%3D%3D%20%22%20%2B%20return_val%29%3B) 
+[on pytut](http://www.pythontutor.com/javascript.html#code=function%20f%28param_1%2C%20param_2%2C%20param_3%29%20%7B%0A%20var%20result%20%3D%20param_2%20%2B%20param_1%20%2B%20param_3%3B%0A%20return%20result%3B%0A%7D%3B%0A%0Alet%20x%20%3D%20%22x%22%2C%20y%20%3D%20%22y%22%2C%20z%20%3D%20%22z%22%3B%0Alet%20return_val%20%3D%20f%28%2F*%20pass%20x%2C%20y%20%26%20z%20in%20the%20right%20order%20*%2F%29%3B%0A%0Aconsole.assert%28return_val%20%3D%3D%3D%20%22xzy%22%2C%20%226%3A%20return_val%20%3D%3D%3D%20%22%20%2B%20return_val%29%3B&curInstr=0&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)  
+[parsonized](http://janke-learning.github.io/parsonizer/?snippet=function%20f%28param_1%2C%20param_2%2C%20param_3%29%20%7B%0A%20var%20result%20%3D%20param_2%20%2B%20param_1%20%2B%20param_3%3B%0A%20return%20result%3B%0A%7D%3B%0A%0Alet%20x%20%3D%20%22x%22%2C%20y%20%3D%20%22y%22%2C%20z%20%3D%20%22z%22%3B%0Alet%20return_val%20%3D%20f%28%2F*%20pass%20x%2C%20y%20%26%20z%20in%20the%20right%20order%20*%2F%29%3B%0A%0Aconsole.assert%28return_val%20%3D%3D%3D%20%22xzy%22%2C%20%226%3A%20return_val%20%3D%3D%3D%20%22%20%2B%20return_val%29%3B) 
 ```js
 {  // 6
-  function f(param_1, param_2, param_3) {
+   function f(param_1, param_2, param_3) {
     var result = param_2 + param_1 + param_3;
     return result;
-  };
+   };
 
-  // set values in the args to pass the assert
-  let x = "x", y = "y", z = "z";
-  let return_val = f(/* pass x, y & z in the right order */);
+   let x = "x", y = "y", z = "z";
+   let return_val = f(/* pass x, y & z in the right order */);
 
-  console.assert(return_val === "xzy", "6: return_val === " + return_val);
+   console.assert(return_val === "xzy", "6: return_val === " + return_val);
 }
 ```
 
 ### 7
 
-[on pytut](http://www.pythontutor.com/javascript.html#code=function%20f%28param_1%2C%20param_2%2C%20param_3%29%20%7B%0A%20%20var%20result%20%3D%20%2F*%20arrange%20the%20params%20to%20pass%20the%20assert%20*%2F%3B%0A%20%20return%20result%3B%0A%7D%3B%0A%0A%2F%2F%20set%20values%20in%20the%20args%20to%20pass%20the%20assert%0Alet%20arg_1%20%3D%20%22z%22%2C%20arg_2%20%3D%20%22y%22%2C%20arg_3%20%3D%20%22x%22%3B%0Alet%20return_val%20%3D%20f%28arg_1%2C%20arg_2%2C%20arg_3%29%3B%0A%0Aconsole.assert%28return_val%20%3D%3D%3D%20%22xzy%22%2C%20%22return_val%20%3D%3D%3D%20%22%20%2B%20return_val%29%3B&mode=edit&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)  
-[parsonized](http://janke-learning.github.io/parsonizer/?snippet=function%20f%28param_1%2C%20param_2%2C%20param_3%29%20%7B%0A%20%20var%20result%20%3D%20%2F*%20arrange%20the%20params%20to%20pass%20the%20assert%20*%2F%3B%0A%20%20return%20result%3B%0A%7D%3B%0A%0A%2F%2F%20set%20values%20in%20the%20args%20to%20pass%20the%20assert%0Alet%20arg_1%20%3D%20%22z%22%2C%20arg_2%20%3D%20%22y%22%2C%20arg_3%20%3D%20%22x%22%3B%0Alet%20return_val%20%3D%20f%28arg_1%2C%20arg_2%2C%20arg_3%29%3B%0A%0Aconsole.assert%28return_val%20%3D%3D%3D%20%22xzy%22%2C%20%22return_val%20%3D%3D%3D%20%22%20%2B%20return_val%29%3B)  
+[on pytut](http://www.pythontutor.com/javascript.html#code=function%20f%28param_1%2C%20param_2%2C%20param_3%29%20%7B%0A%20var%20result%20%3D%20%2F*%20arrange%20the%20params%20to%20pass%20the%20assert%20*%2F%3B%0A%20return%20result%3B%0A%7D%3B%0A%0Alet%20arg_1%20%3D%20%22z%22%2C%20arg_2%20%3D%20%22y%22%2C%20arg_3%20%3D%20%22x%22%3B%0Alet%20return_val%20%3D%20f%28arg_1%2C%20arg_2%2C%20arg_3%29%3B%0A%0Aconsole.assert%28return_val%20%3D%3D%3D%20%22xzy%22%2C%20%227%3A%20return_val%20%3D%3D%3D%20%22%20%2B%20return_val%29%3B&curInstr=0&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)  
+[parsonized](http://janke-learning.github.io/parsonizer/?snippet=function%20f%28param_1%2C%20param_2%2C%20param_3%29%20%7B%0A%20var%20result%20%3D%20%2F*%20arrange%20the%20params%20to%20pass%20the%20assert%20*%2F%3B%0A%20return%20result%3B%0A%7D%3B%0A%0Alet%20arg_1%20%3D%20%22z%22%2C%20arg_2%20%3D%20%22y%22%2C%20arg_3%20%3D%20%22x%22%3B%0Alet%20return_val%20%3D%20f%28arg_1%2C%20arg_2%2C%20arg_3%29%3B%0A%0Aconsole.assert%28return_val%20%3D%3D%3D%20%22xzy%22%2C%20%227%3A%20return_val%20%3D%3D%3D%20%22%20%2B%20return_val%29%3B)  
 ```js
 {  // 7
-  function f(param_1, param_2, param_3) {
+   function f(param_1, param_2, param_3) {
     var result = /* arrange the params to pass the assert */;
     return result;
-  };
+   };
 
-  // set values in the args to pass the assert
-  let arg_1 = "z", arg_2 = "y", arg_3 = "x";
-  let return_val = f(arg_1, arg_2, arg_3);
+   let arg_1 = "z", arg_2 = "y", arg_3 = "x";
+   let return_val = f(arg_1, arg_2, arg_3);
 
-  console.assert(return_val === "xzy", "7: return_val === " + return_val);
+   console.assert(return_val === "xzy", "7: return_val === " + return_val);
 }
 ```
 
 ### 8
 
-[on pytut](http://www.pythontutor.com/javascript.html#code=function%20f%28param_1%2C%20param_2%2C%20param_3%29%20%7B%0A%20%20var%20result%20%3D%20%2F*%20arrange%20the%20params%20to%20pass%20the%20assert%20*%2F%3B%0A%20%20return%20result%3B%0A%7D%3B%0A%0A%2F%2F%20set%20values%20in%20the%20args%20to%20pass%20the%20assert%0Alet%20arg_1%20%3D%20%22z%22%2C%20arg_2%20%3D%20%22y%22%2C%20arg_3%20%3D%20%22x%22%3B%0Alet%20return_val%20%3D%20f%28arg_1%2C%20arg_2%2C%20arg_3%29%3B%0A%0Aconsole.assert%28return_val%20%3D%3D%3D%20%22yxz%22%2C%20%22return_val%20%3D%3D%3D%20%22%20%2B%20return_val%29%3B&mode=edit&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)  
-[parsonized](http://janke-learning.github.io/parsonizer/?snippet=function%20f%28param_1%2C%20param_2%2C%20param_3%29%20%7B%0A%20%20var%20result%20%3D%20%2F*%20arrange%20the%20params%20to%20pass%20the%20assert%20*%2F%3B%0A%20%20return%20result%3B%0A%7D%3B%0A%0A%2F%2F%20set%20values%20in%20the%20args%20to%20pass%20the%20assert%0Alet%20arg_1%20%3D%20%22z%22%2C%20arg_2%20%3D%20%22y%22%2C%20arg_3%20%3D%20%22x%22%3B%0Alet%20return_val%20%3D%20f%28arg_1%2C%20arg_2%2C%20arg_3%29%3B%0A%0Aconsole.assert%28return_val%20%3D%3D%3D%20%22yxz%22%2C%20%22return_val%20%3D%3D%3D%20%22%20%2B%20return_val%29%3B)  
+[on pytut](http://www.pythontutor.com/javascript.html#code=function%20f%28param_1%2C%20param_2%2C%20param_3%29%20%7B%0A%20var%20result%20%3D%20%2F*%20arrange%20the%20params%20to%20pass%20the%20assert%20*%2F%3B%0A%20return%20result%3B%0A%7D%3B%0A%0Alet%20arg_1%20%3D%20%22z%22%2C%20arg_2%20%3D%20%22y%22%2C%20arg_3%20%3D%20%22x%22%3B%0Alet%20return_val%20%3D%20f%28arg_1%2C%20arg_2%2C%20arg_3%29%3B%0A%0Aconsole.assert%28return_val%20%3D%3D%3D%20%22yxz%22%2C%20%228%3A%20return_val%20%3D%3D%3D%20%22%20%2B%20return_val%29%3B&curInstr=0&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)  
+[parsonized](http://janke-learning.github.io/parsonizer/?snippet=function%20f%28param_1%2C%20param_2%2C%20param_3%29%20%7B%0A%20var%20result%20%3D%20%2F*%20arrange%20the%20params%20to%20pass%20the%20assert%20*%2F%3B%0A%20return%20result%3B%0A%7D%3B%0A%0Alet%20arg_1%20%3D%20%22z%22%2C%20arg_2%20%3D%20%22y%22%2C%20arg_3%20%3D%20%22x%22%3B%0Alet%20return_val%20%3D%20f%28arg_1%2C%20arg_2%2C%20arg_3%29%3B%0A%0Aconsole.assert%28return_val%20%3D%3D%3D%20%22yxz%22%2C%20%228%3A%20return_val%20%3D%3D%3D%20%22%20%2B%20return_val%29%3B)  
 ```js
 {  // 8
-  function f(param_1, param_2, param_3) {
+   function f(param_1, param_2, param_3) {
     var result = /* arrange the params to pass the assert */;
     return result;
-  };
+   };
 
-  // set values in the args to pass the assert
-  let arg_1 = "z", arg_2 = "y", arg_3 = "x";
-  let return_val = f(arg_1, arg_2, arg_3);
+   let arg_1 = "z", arg_2 = "y", arg_3 = "x";
+   let return_val = f(arg_1, arg_2, arg_3);
 
-  console.assert(return_val === "yxz", "8: return_val === " + return_val);
+   console.assert(return_val === "yxz", "8: return_val === " + return_val);
 }
 ```
 
