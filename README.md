@@ -3,9 +3,19 @@
 Some exercises to help understand functions
 
 ### Index
-* [functions](./1-functions.md)
-* [behavior](./2-behavior.md)
-* [callstack](./3-callstack.md)
+1. [functions](./1-functions.md)
+2. [turtle shuffle](./2-turtle-shuffle.md)
+3. [callstack](./3-callstack.md)
+
+---
+
+
+* [HYF - functions](https://github.com/HackYourFutureBelgium/fundamentals/blob/master/fundamentals/functions.md)
+* Lexical Scope: [NWCalvank](https://www.youtube.com/watch?v=GhNA0r10MmA),  [techsith 1](https://www.youtube.com/watch?v=ycTp4vRmLp8), [techsith 2](https://www.youtube.com/watch?v=7tGmS2SPxBo&list=PL7pEw9n3GkoVYU-ZKBrDnxIiiUn0YP-uO&index=2)  
+* [callstack - Colt Steele](https://www.youtube.com/watch?v=W8AeMrVtFLY)
+* [callstack - ](https://www.youtube.com/watch?v=w6QGEiQceOM)
+
+
 
 ___
 ___
