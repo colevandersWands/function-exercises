@@ -307,6 +307,7 @@ this works just like arrays and objects
 
 functions can be declared and called from within other functions.  this leads to a stack of frames -> the callstack
 [on pytut](http://www.pythontutor.com/live.html#code=const%20global_var%20%3D%20%22global%22%3B%0Aconsole.log%28global_var,%20bottom_var,%20middle_var,%20top_var%29%3B%0Afunction%20bottom%28%29%20%7B%0A%20%20var%20bottom_var%20%3D%20%22bottom%22%3B%0A%20%20console.log%28global_var,%20bottom_var,%20middle_var,%20top_var%29%3B%0A%20%20function%20middle%28%29%20%7B%0A%20%20%20%20var%20middle_var%20%3D%20%22middle%22%3B%0A%20%20%20%20console.log%28global_var,%20bottom_var,%20middle_var,%20top_var%29%3B%0A%20%20%20%20function%20top%28%29%20%7B%0A%20%20%20%20%20%20var%20top_var%20%3D%20%22top%22%3B%0A%20%20%20%20%20%20console.log%28global_var,%20bottom_var,%20middle_var,%20top_var%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20top%28%29%0A%20%20%7D%0A%20%20middle%28%29%3B%0A%7D%0Abottom%28%29%3B&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
+```js
 {
   const global_var = "g";
   console.log(global_var, bottom_var, middle_var, top_var);
