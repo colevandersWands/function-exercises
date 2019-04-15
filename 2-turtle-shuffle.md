@@ -1,6 +1,7 @@
 # Turtle Shuffle
 
 some trickier function exercises before moving on.
+* Reading function behavior, and using them correctly
 * Defining vs. Calling functions
     * Defining: when you write the funciton -> function name() {}.  This creates the function in memory
     * Calling: using the function to compute new values -> name().  This creates a new frame and returns a new value
