@@ -28,15 +28,15 @@ It sounds complicated at first, but after some practice you'll find it's not so 
 
 ### Tailor
 
-[on pytut](http://www.pythontutor.com/javascript.html#code=function%20a_word%28_1%2C%20_2%2C%20_3%2C%20_4%2C%20_5%2C%20_6%29%20%7B%0A%20%20%0A%20%20function%20tailor%28_1%2C%20_2%2C%20_3%2C%20_4%2C%20_5%2C%20_6%29%20%7B%0A%20%20%20%20return%20_1%20%2B%20_2%20%2B%20_3%20%2B%20_4%20%2B%20_5%20%2B%20_6%3B%0A%20%20%7D%0A%20%20var%20word%20%3D%20tailor%28_2%2C%20_1%2C%20_6%2C%20_5%2C%20_3%2C%20_4%29%3B%0A%0A%20%20var%20result%20%3D%20word%3B%0A%20%20return%20result%3B%0A%7D%0Aconst%20return_val%20%3D%20a_word%28%22a%22%2C%20%22t%22%2C%20%22o%22%2C%20%22r%22%2C%20%22l%22%2C%20%22i%22%29%3B%0Aconsole.assert%28return_val%20%3D%3D%3D%20\'tailor\'%2C%20%22example%201%3A%20return_val%20%3D%3D%3D%20%22%20%2B%20return_val%29%3B&curInstr=0&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
+[on pytut](http://www.pythontutor.com/javascript.html#code=function%20a_word%28_1,%20_2,%20_3,%20_4,%20_5,%20_6%29%20%7B%20%0A%20%20%0A%20%20function%20tailor%28_a,%20_b,%20_c,%20_d,%20_e,%20_f%29%20%7B%0A%20%20%20%20return%20_a%20%2B%20_c%20%2B%20_b%20%2B%20_d%20%2B%20_f%20%2B%20_e%3B%0A%20%20%7D%0A%20%20var%20word%20%3D%20tailor%28_2,%20_6,%20_1,%20_5,%20_4,%20_3%29%3B%0A%0A%20%20var%20result%20%3D%20word%3B%0A%20%20return%20result%3B%0A%7D%0Aconst%20return_val%20%3D%20a_word%28%22a%22,%20%22t%22,%20%22o%22,%20%22r%22,%20%22l%22,%20%22i%22%29%3B%0Aconsole.assert%28return_val%20%3D%3D%3D%20'tailor',%20%22example%201%3A%20return_val%20%3D%3D%3D%20%22%20%2B%20return_val%29%3B&curInstr=0&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
 ```js
 { // completed example 1
   function a_word(_1, _2, _3, _4, _5, _6) { 
     
-    function tailor(_1, _2, _3, _4, _5, _6) {
-      return _1 + _2 + _3 + _4 + _5 + _6;
+    function tailor(_a, _b, _c, _d, _e, _f) {
+      return _a + _c + _b + _d + _f + _e;
     }
-    var word = tailor(_2, _1, _6, _5, _3, _4);
+    var word = tailor(_2, _6, _1, _5, _4, _3);
 
     var result = word;
     return result;
@@ -48,18 +48,18 @@ It sounds complicated at first, but after some practice you'll find it's not so 
 
 ### Space Capes
 
-[on pytut](http://www.pythontutor.com/javascript.html#code=function%20sentence%28_1%2C%20_2%2C%20_3%2C%20_4%2C%20_5%29%20%7B%0A%20%20%0A%20%20function%20space%28_1%2C%20_2%2C%20_3%2C%20_4%2C%20_5%29%20%7B%0A%20%20%20%20return%20_1%20%2B%20_2%20%2B%20_3%20%2B%20_4%20%2B%20_5%3B%0A%20%20%7D%0A%20%20var%20word_1%20%3D%20space%28_5%2C%20_4%2C%20_2%2C%20_3%2C%20_1%29%3B%0A%0A%20%20function%20capes%28_1%2C%20_2%2C%20_3%2C%20_4%2C%20_5%29%20%7B%0A%20%20%20%20return%20_1%20%2B%20_2%20%2B%20_3%20%2B%20_4%20%2B%20_5%3B%0A%20%20%7D%0A%20%20var%20word_2%20%3D%20capes%28_3%2C%20_2%2C%20_4%2C%20_1%2C%20_5%29%3B%0A%0A%20%20var%20result%20%3D%20word_1%20%2B%20%22%20%22%20%2B%20word_2%3B%0A%20%20return%20result%3B%0A%7D%0Aconst%20return_val%20%3D%20sentence%28%22e%22%2C%20%22a%22%2C%20%22c%22%2C%20%22p%22%2C%20%22s%22%29%3B%0Aconsole.assert%28return_val%20%3D%3D%3D%20\'space%20capes\'%2C%20%22example%202%3A%20return_val%20%3D%3D%3D%20%22%20%2B%20return_val%29%3B&curInstr=0&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)  
+[on pytut](http://www.pythontutor.com/javascript.html#code=function%20sentence%28_1,%20_2,%20_3,%20_4,%20_5%29%20%7B%20%0A%20%20%0A%20%20function%20space%28_a,%20_b,%20_c,%20_d,%20_e%29%20%7B%0A%20%20%20%20return%20_a%20%2B%20_b%20%2B%20_c%20%2B%20_d%20%2B%20_e%3B%0A%20%20%7D%0A%20%20var%20word_1%20%3D%20space%28_5,%20_4,%20_2,%20_3,%20_1%29%3B%0A%0A%20%20function%20capes%28_a,%20_b,%20_c,%20_d,%20_e%29%20%7B%0A%20%20%20%20return%20_a%20%2B%20_b%20%2B%20_c%20%2B%20_d%20%2B%20_e%3B%0A%20%20%7D%0A%20%20var%20word_2%20%3D%20capes%28_3,%20_2,%20_4,%20_1,%20_5%29%3B%0A%0A%20%20var%20result%20%3D%20word_1%20%2B%20%22%20%22%20%2B%20word_2%3B%0A%20%20return%20result%3B%0A%7D%0Aconst%20return_val%20%3D%20sentence%28%22e%22,%20%22a%22,%20%22c%22,%20%22p%22,%20%22s%22%29%3B%0Aconsole.assert%28return_val%20%3D%3D%3D%20'space%20capes',%20%22example%202%3A%20return_val%20%3D%3D%3D%20%22%20%2B%20return_val%29%3B&curInstr=0&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)  
 ```js
 { // completed example 2
   function sentence(_1, _2, _3, _4, _5) { 
     
-    function space(_1, _2, _3, _4, _5) {
-      return _1 + _2 + _3 + _4 + _5;
+    function space(_a, _b, _c, _d, _e) {
+      return _a + _b + _c + _d + _e;
     }
     var word_1 = space(_5, _4, _2, _3, _1);
 
-    function capes(_1, _2, _3, _4, _5) {
-      return _1 + _2 + _3 + _4 + _5;
+    function capes(_a, _b, _c, _d, _e) {
+      return _a + _b + _c + _d + _e;
     }
     var word_2 = capes(_3, _2, _4, _1, _5);
 
@@ -79,13 +79,13 @@ It sounds complicated at first, but after some practice you'll find it's not so 
 
 ### Tour 1
 
-[on pytut](http://www.pythontutor.com/javascript.html#code=function%20a_word%28_1%2C%20_2%2C%20_3%2C%20_4%29%20%7B%0A%20%20%0A%20%20function%20tour%28_1%2C%20_2%2C%20_3%2C%20_4%29%20%7B%0A%20%20%20%20return%20_2%20%2B%20_1%20%2B%20_3%20%2B%20_4%3B%0A%20%20%7D%0A%20%20var%20word%20%3D%20tour%28%2F*%20fill%20this%20in%20*%2F%29%3B%0A%0A%20%20var%20result%20%3D%20word%3B%0A%20%20return%20result%3B%0A%7D%0Aconst%20return_val%20%3D%20a_word%28%22o%22%2C%20%22t%22%2C%20%22u%22%2C%20%22r%22%29%3B%0Aconsole.assert%28return_val%20%3D%3D%3D%20\'tour\'%2C%20%22wu-1%3A%20return_val%20%3D%3D%3D%20%22%20%2B%20return_val%29%3B&curInstr=0&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)  
+[on pytut](http://www.pythontutor.com/javascript.html#code=function%20a_word%28_1,%20_2,%20_3,%20_4%29%20%7B%20%0A%20%20%0A%20%20function%20tour%28_a,%20_b,%20_c,%20_d%29%20%7B%0A%20%20%20%20return%20_b%20%2B%20_a%20%2B%20_c%20%2B%20_d%3B%0A%20%20%7D%0A%20%20var%20word%20%3D%20tour%28/*%20fill%20this%20in%20*/%29%3B%0A%0A%20%20var%20result%20%3D%20word%3B%0A%20%20return%20result%3B%0A%7D%0Aconst%20return_val%20%3D%20a_word%28%22o%22,%20%22t%22,%20%22u%22,%20%22r%22%29%3B%0Aconsole.assert%28return_val%20%3D%3D%3D%20'tour',%20%22wu-1%3A%20return_val%20%3D%3D%3D%20%22%20%2B%20return_val%29%3B&curInstr=0&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)  
 ```js
 { // warmup 1
   function a_word(_1, _2, _3, _4) { 
     
-    function tour(_1, _2, _3, _4) {
-      return _2 + _1 + _3 + _4;
+    function tour(_a, _b, _c, _d) {
+      return _b + _a + _c + _d;
     }
     var word = tour(/* fill this in */);
 
@@ -99,13 +99,13 @@ It sounds complicated at first, but after some practice you'll find it's not so 
 
 ### Tour 2
 
-[on pytut](http://www.pythontutor.com/javascript.html#code=function%20a_word%28_1%2C%20_2%2C%20_3%2C%20_4%29%20%7B%0A%20%20%0A%20%20function%20tour%28_1%2C%20_2%2C%20_3%2C%20_4%29%20%7B%0A%20%20%20%20return%20_3%20%2B%20_1%20%2B%20_4%20%2B%20_2%3B%0A%20%20%7D%0A%20%20var%20word%20%3D%20tour%28%2F*%20fill%20this%20in%20*%2F%29%3B%0A%0A%20%20var%20result%20%3D%20word%3B%0A%20%20return%20result%3B%0A%7D%0Aconst%20return_val%20%3D%20a_word%28%22u%22%2C%20%2F*%20fill%20this%20in%20*%2F%29%3B%0Aconsole.assert%28return_val%20%3D%3D%3D%20\'tour\'%2C%20%22wu-2%3A%20return_val%20%3D%3D%3D%20%22%20%2B%20return_val%29%3B&curInstr=0&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)  
+[on pytut](http://www.pythontutor.com/live.html#code=function%20a_word%28_1,%20_2,%20_3,%20_4%29%20%7B%20%0A%20%20%0A%20%20function%20tour%28_a,%20_b,%20_c,%20_d%29%20%7B%0A%20%20%20%20return%20_c%20%2B%20_a%20%2B%20_d%20%2B%20_b%3B%0A%20%20%7D%0A%20%20var%20word%20%3D%20tour%28/*%20fill%20this%20in%20*/%29%3B%0A%0A%20%20var%20result%20%3D%20word%3B%0A%20%20return%20result%3B%0A%7D%0Aconst%20return_val%20%3D%20a_word%28%22u%22,%20/*%20fill%20this%20in%20*/%29%3B%0Aconsole.assert%28return_val%20%3D%3D%3D%20'tour',%20%22wu-2%3A%20return_val%20%3D%3D%3D%20%22%20%2B%20return_val%29%3B&cumulative=false&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)  
 ```js
 { // warmup 2
   function a_word(_1, _2, _3, _4) { 
     
-    function tour(_1, _2, _3, _4) {
-      return _3 + _1 + _4 + _2;
+    function tour(_a, _b, _c, _d) {
+      return _c + _a + _d + _b;
     }
     var word = tour(/* fill this in */);
 
@@ -125,23 +125,23 @@ It sounds complicated at first, but after some practice you'll find it's not so 
 
 ### 1
 
-[on pytut](http://www.pythontutor.com/javascript.html#code=function%20sentence%28_1%2C%20_2%2C%20_3%29%20%7B%0A%20%20%0A%20%20function%20eat%28_1%2C%20_2%2C%20_3%29%20%7B%0A%20%20%20%20return%20_1%20%2B%20_2%20%2B%20_3%3B%0A%20%20%7D%0A%20%20var%20word_1%20%3D%20eat%28%2F*%20fill%20this%20in%20*%2F%29%3B%0A%0A%20%20function%20ate%28_1%2C%20_2%2C%20_3%29%20%7B%0A%20%20%20%20return%20_1%20%2B%20_2%20%2B%20_3%3B%0A%20%20%7D%0A%20%20var%20word_2%20%3D%20ate%28_1%2C%20_2%2C%20_3%29%3B%0A%0A%20%20function%20tea%28_1%2C%20_2%2C%20_3%29%20%7B%0A%20%20%20%20return%20_1%20%2B%20_2%20%2B%20_3%3B%0A%20%20%7D%0A%20%20var%20word_3%20%3D%20tea%28%2F*%20fill%20this%20in%20*%2F%29%3B%0A%0A%20%20var%20result%20%3D%20word_1%20%2B%20%22%20%22%20%2B%20word_2%20%2B%20%22%20%22%20%2B%20word_3%3B%0A%20%20return%20result%3B%0A%7D%0Aconst%20return_val%20%3D%20sentence%28%22a%22%2C%20%22e%22%2C%20%22t%22%29%3B%0Aconsole.assert%28return_val%20%3D%3D%3D%20\'eat%20ate%20tea\'%2C%20%221%3A%20return_val%20%3D%3D%3D%20%22%20%2B%20return_val%29%3B&curInstr=0&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)  
+[on pytut](http://www.pythontutor.com/live.html#code=function%20sentence%28_1,%20_2,%20_3%29%20%7B%20%0A%20%20%0A%20%20function%20eat%28_x,%20_y,%20_z%29%20%7B%0A%20%20%20%20return%20_x%20%2B%20_y%20%2B%20_z%3B%0A%20%20%7D%0A%20%20var%20word_1%20%3D%20eat%28/*%20fill%20this%20in%20*/%29%3B%0A%0A%20%20function%20ate%28_x,%20_y,%20_z%29%20%7B%0A%20%20%20%20return%20_x%20%2B%20_y%20%2B%20_z%3B%0A%20%20%7D%0A%20%20var%20word_2%20%3D%20ate%28_1,%20_2,%20_3%29%3B%0A%0A%20%20function%20tea%28_x,%20_y,%20_z%29%20%7B%0A%20%20%20%20return%20_x%20%2B%20_y%20%2B%20_3%3B%0A%20%20%7D%0A%20%20var%20word_3%20%3D%20tea%28/*%20fill%20this%20in%20*/%29%3B%0A%0A%20%20var%20result%20%3D%20word_1%20%2B%20%22%20%22%20%2B%20word_2%20%2B%20%22%20%22%20%2B%20word_3%3B%0A%20%20return%20result%3B%0A%7D%0Aconst%20return_val%20%3D%20sentence%28%22a%22,%20%22e%22,%20%22t%22%29%3B%0Aconsole.assert%28return_val%20%3D%3D%3D%20'eat%20ate%20tea',%20%221%3A%20return_val%20%3D%3D%3D%20%22%20%2B%20return_val%29%3B&cumulative=false&curInstr=14&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)  
 ```js
 { // 1 -> eat ate tea.  
   function sentence(_1, _2, _3) { 
     
-    function eat(_1, _2, _3) {
-      return _1 + _2 + _3;
+    function eat(_x, _y, _z) {
+      return _x + _y + _z;
     }
     var word_1 = eat(/* fill this in */);
 
-    function ate(_1, _2, _3) {
-      return _1 + _2 + _3;
+    function ate(_x, _y, _z) {
+      return _x + _y + _z;
     }
     var word_2 = ate(_1, _2, _3);
 
-    function tea(_1, _2, _3) {
-      return _1 + _2 + _3;
+    function tea(_x, _y, _z) {
+      return _x + _y + _3;
     }
     var word_3 = tea(/* fill this in */);
 
@@ -155,23 +155,23 @@ It sounds complicated at first, but after some practice you'll find it's not so 
 
 ### 2 
 
-[on pytut](http://www.pythontutor.com/javascript.html#code=function%20sentence%28_1%2C%20_2%2C%20_3%29%20%7B%0A%20%20%0A%20%20function%20eat%28_1%2C%20_2%2C%20_3%29%20%7B%0A%20%20%20%20return%20_3%20%2B%20_2%20%2B%20_1%3B%0A%20%20%7D%0A%20%20var%20word_1%20%3D%20eat%28%2F*%20fill%20this%20in%20*%2F%29%3B%0A%0A%20%20function%20ate%28_1%2C%20_2%2C%20_3%29%20%7B%0A%20%20%20%20return%20_2%20%2B%20_1%20%2B%20_3%3B%0A%20%20%7D%0A%20%20var%20word_2%20%3D%20ate%28%2F*%20fill%20this%20in%20*%2F%29%3B%0A%0A%20%20function%20tea%28_1%2C%20_2%2C%20_3%29%20%7B%0A%20%20%20%20return%20_1%20%2B%20_3%20%2B%20_2%3B%0A%20%20%7D%0A%20%20var%20word_3%20%3D%20tea%28%2F*%20fill%20this%20in%20*%2F%29%3B%0A%0A%20%20var%20result%20%3D%20word_1%20%2B%20%22%20%22%20%2B%20word_2%20%2B%20%22%20%22%20%2B%20word_3%3B%0A%20%20return%20result%3B%0A%7D%0Aconst%20return_val%20%3D%20sentence%28%22a%22%2C%20%22e%22%2C%20%22t%22%29%3B%0Aconsole.assert%28return_val%20%3D%3D%3D%20\'eat%20ate%20tea\'%2C%20%222%3A%20return_val%20%3D%3D%3D%20%22%20%2B%20return_val%29%3B&curInstr=0&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)  
+[on pytut](http://www.pythontutor.com/live.html#code=function%20sentence%28_1,%20_2,%20_3%29%20%7B%20%0A%20%20%0A%20%20function%20eat%28_x,%20_y,%20_z%29%20%7B%0A%20%20%20%20return%20_z%20%2B%20_y%20%2B%20_x%3B%0A%20%20%7D%0A%20%20var%20word_1%20%3D%20eat%28/*%20fill%20this%20in%20*/%29%3B%0A%0A%20%20function%20ate%28_x,%20_y,%20_z%29%20%7B%0A%20%20%20%20return%20_y%20%2B%20_x%20%2B%20_z%3B%0A%20%20%7D%0A%20%20var%20word_2%20%3D%20ate%28/*%20fill%20this%20in%20*/%29%3B%0A%0A%20%20function%20tea%28_x,%20_y,%20_z%29%20%7B%0A%20%20%20%20return%20_x%20%2B%20_z%20%2B%20_y%3B%0A%20%20%7D%0A%20%20var%20word_3%20%3D%20tea%28/*%20fill%20this%20in%20*/%29%3B%0A%0A%20%20var%20result%20%3D%20word_1%20%2B%20%22%20%22%20%2B%20word_2%20%2B%20%22%20%22%20%2B%20word_3%3B%0A%20%20return%20result%3B%0A%7D%0Aconst%20return_val%20%3D%20sentence%28%22a%22,%20%22e%22,%20%22t%22%29%3B%0Aconsole.assert%28return_val%20%3D%3D%3D%20'eat%20ate%20tea',%20%222%3A%20return_val%20%3D%3D%3D%20%22%20%2B%20return_val%29%3B&cumulative=false&curInstr=14&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)  
 ```js
 { // 2 -> eat ate tea.  2 
   function sentence(_1, _2, _3) { 
     
-    function eat(_1, _2, _3) {
-      return _3 + _2 + _1;
+    function eat(_x, _y, _z) {
+      return _z + _y + _x;
     }
     var word_1 = eat(/* fill this in */);
 
-    function ate(_1, _2, _3) {
-      return _2 + _1 + _3;
+    function ate(_x, _y, _z) {
+      return _y + _x + _z;
     }
     var word_2 = ate(/* fill this in */);
 
-    function tea(_1, _2, _3) {
-      return _1 + _3 + _2;
+    function tea(_x, _y, _z) {
+      return _x + _z + _y;
     }
     var word_3 = tea(/* fill this in */);
 
@@ -185,43 +185,43 @@ It sounds complicated at first, but after some practice you'll find it's not so 
 
 ### 3
 
-[on pytut](http://www.pythontutor.com/javascript.html#code=function%20sentence%28_1%2C%20_2%2C%20_3%2C%20_4%2C%20_5%29%20%7B%0A%0A%20%20function%20space%28_1%2C%20_2%2C%20_3%2C%20_4%2C%20_5%29%20%7B%0A%20%20%20%20return%20_1%20%2B%20_2%20%2B%20_3%20%2B%20_4%20%2B%20_5%3B%0A%20%20%7D%0A%20%20var%20word_1%20%3D%20space%28%2F*%20fill%20this%20in%20*%2F%29%3B%0A%0A%20%20function%20capes%28_1%2C%20_2%2C%20_3%2C%20_4%2C%20_5%29%20%7B%0A%20%20%20%20return%20_1%20%2B%20_2%20%2B%20_3%20%2B%20_4%20%2B%20_5%3B%0A%20%20%7D%0A%20%20var%20word_2%20%3D%20capes%28_4%2C%20_3%2C%20_2%2C%20_5%2C%20_1%29%3B%0A%0A%20%20var%20result%20%3D%20word_1%20%2B%20%22%20%22%20%2B%20word_2%3B%0A%20%20return%20result%3B%0A%7D%0Aconst%20return_val%20%3D%20sentence%28%2F*%20fill%20this%20in%20*%2F%29%3B%0Aconsole.assert%28return_val%20%3D%3D%3D%20\'space%20capes\'%2C%20%223%3A%20return_val%20%3D%3D%3D%20%22%20%2B%20return_val%29%3B&curInstr=0&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)  
+[on pytut](http://www.pythontutor.com/live.html#code=function%20sentence%28_1,%20_2,%20_3,%20_4,%20_5%29%20%7B%20%0A%0A%20%20function%20space%28_v,%20_w,%20_x,%20_y,%20_z%29%20%7B%0A%20%20%20%20return%20_v%20%2B%20_w%20%2B%20_x%20%2B%20_y%20%2B%20_z%3B%0A%20%20%7D%0A%20%20var%20word_1%20%3D%20space%28/*%20fill%20this%20in%20*/%29%3B%0A%0A%20%20function%20capes%28_v,%20_w,%20_x,%20_y,%20_z%29%20%7B%0A%20%20%20%20return%20_v%20%2B%20_w%20%2B%20_x%20%2B%20_y%20%2B%20_z%3B%0A%20%20%7D%0A%20%20var%20word_2%20%3D%20capes%28_4,%20_3,%20_2,%20_5,%20_1%29%3B%0A%0A%20%20var%20result%20%3D%20word_1%20%2B%20%22%20%22%20%2B%20word_2%3B%0A%20%20return%20result%3B%0A%7D%0Aconst%20return_val%20%3D%20sentence%28/*%20fill%20this%20in%20*/%29%3B%0Aconsole.assert%28return_val%20%3D%3D%3D%20'space%20capes',%20%223%3A%20return_val%20%3D%3D%3D%20%22%20%2B%20return_val%29%3B&cumulative=false&curInstr=11&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)  
 ```js
 { // 3 -> space capes
-function sentence(_1, _2, _3, _4, _5) { 
+  function sentence(_1, _2, _3, _4, _5) { 
 
-  function space(_1, _2, _3, _4, _5) {
-    return _1 + _2 + _3 + _4 + _5;
+    function space(_v, _w, _x, _y, _z) {
+      return _v + _w + _x + _y + _z;
+    }
+    var word_1 = space(/* fill this in */);
+
+    function capes(_v, _w, _x, _y, _z) {
+      return _v + _w + _x + _y + _z;
+    }
+    var word_2 = capes(_4, _3, _2, _5, _1);
+
+    var result = word_1 + " " + word_2;
+    return result;
   }
-  var word_1 = space(/* fill this in */);
-
-  function capes(_1, _2, _3, _4, _5) {
-    return _1 + _2 + _3 + _4 + _5;
-  }
-  var word_2 = capes(_4, _3, _2, _5, _1);
-
-  var result = word_1 + " " + word_2;
-  return result;
-}
-const return_val = sentence(/* fill this in */);
-console.assert(return_val === 'space capes', "3: return_val === " + return_val);
+  const return_val = sentence(/* fill this in */);
+  console.assert(return_val === 'space capes', "3: return_val === " + return_val);
 };
 ```
 
 ### 4
 
-[on pytut](http://www.pythontutor.com/javascript.html#code=function%20sentence%28_1%2C%20_2%2C%20_3%2C%20_4%2C%20_5%29%20%7B%0A%0A%20%20function%20space%28_1%2C%20_2%2C%20_3%2C%20_4%2C%20_5%29%20%7B%0A%20%20%20%20return%20_1%20%2B%20_2%20%2B%20_3%20%2B%20_4%20%2B%20_5%3B%0A%20%20%7D%0A%20%20var%20word_1%20%3D%20space%28_3%2C%20_4%2C%20_1%2C%20_5%2C%20_2%29%3B%0A%0A%20%20function%20capes%28_1%2C%20_2%2C%20_3%2C%20_4%2C%20_5%29%20%7B%0A%20%20%20%20return%20_1%20%2B%20_2%20%2B%20_3%20%2B%20_4%20%2B%20_5%3B%0A%20%20%7D%0A%20%20var%20word_2%20%3D%20capes%28%2F*%20fill%20this%20in%20*%2F%29%3B%0A%0A%20%20var%20result%20%3D%20word_1%20%2B%20%22%20%22%20%2B%20word_2%3B%0A%20%20return%20result%3B%0A%7D%0Aconst%20return_val%20%3D%20sentence%28%2F*%20fill%20this%20in%20*%2F%29%3B%0Aconsole.assert%28return_val%20%3D%3D%3D%20\'space%20capes\'%2C%20%224%3A%20return_val%20%3D%3D%3D%20%22%20%2B%20return_val%29%3B&curInstr=0&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)  
+[on pytut](http://www.pythontutor.com/live.html#code=function%20sentence%28_1,%20_2,%20_3,%20_4,%20_5%29%20%7B%20%0A%0A%20%20function%20space%28_v,%20_w,%20_x,%20_y,%20_z%29%20%7B%0A%20%20%20%20return%20_v%20%2B%20_w%20%2B%20_x%20%2B%20_y%20%2B%20_z%3B%0A%20%20%7D%0A%20%20var%20word_1%20%3D%20space%28_3,%20_4,%20_1,%20_5,%20_2%29%3B%0A%0A%20%20function%20capes%28_v,%20_w,%20_x,%20_y,%20_z%29%20%7B%0A%20%20%20%20return%20_v%20%2B%20_w%20%2B%20_x%20%2B%20_y%20%2B%20_z%3B%0A%20%20%7D%0A%20%20var%20word_2%20%3D%20capes%28/*%20fill%20this%20in%20*/%29%3B%0A%0A%20%20var%20result%20%3D%20word_1%20%2B%20%22%20%22%20%2B%20word_2%3B%0A%20%20return%20result%3B%0A%7D%0Aconst%20return_val%20%3D%20sentence%28/*%20fill%20this%20in%20*/%29%3B%0Aconsole.assert%28return_val%20%3D%3D%3D%20'space%20capes',%20%224%3A%20return_val%20%3D%3D%3D%20%22%20%2B%20return_val%29%3B&cumulative=false&curInstr=11&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)  
 ```js
 { // 4 -> space capes
   function sentence(_1, _2, _3, _4, _5) { 
 
-    function space(_1, _2, _3, _4, _5) {
-      return _1 + _2 + _3 + _4 + _5;
+    function space(_v, _w, _x, _y, _z) {
+      return _v + _w + _x + _y + _z;
     }
     var word_1 = space(_3, _4, _1, _5, _2);
 
-    function capes(_1, _2, _3, _4, _5) {
-      return _1 + _2 + _3 + _4 + _5;
+    function capes(_v, _w, _x, _y, _z) {
+      return _v + _w + _x + _y + _z;
     }
     var word_2 = capes(/* fill this in */);
 
@@ -235,18 +235,18 @@ console.assert(return_val === 'space capes', "3: return_val === " + return_val);
 
 ### 5
 
-[on pytut](http://www.pythontutor.com/javascript.html#code=function%20sentence%28_1%2C%20_2%2C%20_3%2C%20_4%2C%20_5%29%20%7B%0A%0A%20%20function%20cruel%28_1%2C%20_2%2C%20_3%2C%20_4%2C%20_5%29%20%7B%0A%20%20%20%20return%20_1%20%2B%20_2%20%2B%20_3%20%2B%20_4%20%2B%20_5%3B%0A%20%20%7D%0A%20%20var%20word_1%20%3D%20cruel%28_3%2C%20_1%2C%20_4%2C%20_5%2C%20_2%29%3B%0A%0A%20%20function%20ulcer%28_1%2C%20_2%2C%20_3%2C%20_4%2C%20_5%29%20%7B%0A%20%20%20%20return%20_1%20%2B%20_2%20%2B%20_3%20%2B%20_4%20%2B%20_5%3B%0A%20%20%7D%0A%20%20var%20word_2%20%3D%20ulcer%28%2F*%20fill%20this%20in%20*%2F%29%3B%0A%0A%20%20var%20result%20%3D%20word_1%20%2B%20%22%20%22%20%2B%20word_2%3B%0A%20%20return%20result%3B%0A%7D%0Aconst%20return_val%20%3D%20sentence%28%2F*%20fill%20this%20in%20*%2F%29%3B%0Aconsole.assert%28return_val%20%3D%3D%3D%20\'cruel%20ulcer\'%2C%20%225%3A%20return_val%20%3D%3D%3D%20%22%20%2B%20return_val%29%3B&curInstr=0&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)  
+[on pytut](http://www.pythontutor.com/live.html#code=function%20sentence%28_1,%20_2,%20_3,%20_4,%20_5%29%20%7B%20%0A%0A%20%20function%20cruel%28_v,%20_w,%20_x,%20_y,%20_z%29%20%7B%0A%20%20%20%20return%20_v%20%2B%20_w%20%2B%20_x%20%2B%20_y%20%2B%20_z%3B%0A%20%20%7D%0A%20%20var%20word_1%20%3D%20cruel%28_3,%20_1,%20_4,%20_5,%20_2%29%3B%0A%0A%20%20function%20ulcer%28_v,%20_w,%20_x,%20_y,%20_z%29%20%7B%0A%20%20%20%20return%20_v%20%2B%20_w%20%2B%20_x%20%2B%20_y%20%2B%20_z%3B%0A%20%20%7D%0A%20%20var%20word_2%20%3D%20ulcer%28/*%20fill%20this%20in%20*/%29%3B%0A%0A%20%20var%20result%20%3D%20word_1%20%2B%20%22%20%22%20%2B%20word_2%3B%0A%20%20return%20result%3B%0A%7D%0Aconst%20return_val%20%3D%20sentence%28/*%20fill%20this%20in%20*/%29%3B%0Aconsole.assert%28return_val%20%3D%3D%3D%20'cruel%20ulcer',%20%225%3A%20return_val%20%3D%3D%3D%20%22%20%2B%20return_val%29%3B&cumulative=false&curInstr=11&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)  
 ```js
 { // 5 -> cruel ulcer
   function sentence(_1, _2, _3, _4, _5) { 
 
-    function cruel(_1, _2, _3, _4, _5) {
-      return _1 + _2 + _3 + _4 + _5;
+    function cruel(_v, _w, _x, _y, _z) {
+      return _v + _w + _x + _y + _z;
     }
     var word_1 = cruel(_3, _1, _4, _5, _2);
 
-    function ulcer(_1, _2, _3, _4, _5) {
-      return _1 + _2 + _3 + _4 + _5;
+    function ulcer(_v, _w, _x, _y, _z) {
+      return _v + _w + _x + _y + _z;
     }
     var word_2 = ulcer(/* fill this in */);
 
@@ -260,18 +260,18 @@ console.assert(return_val === 'space capes', "3: return_val === " + return_val);
 
 ### 6
 
-[on pytut](http://www.pythontutor.com/javascript.html#code=%7B%20%2F%2F%206%20-%3E%20cruel%20ulcer%0A%20%20function%20sentence%28_1%2C%20_2%2C%20_3%2C%20_4%2C%20_5%29%20%7B%20%0A%0A%20%20%20%20function%20cruel%28_1%2C%20_2%2C%20_3%2C%20_4%2C%20_5%29%20%7B%0A%20%20%20%20%20%20return%20_1%20%2B%20_2%20%2B%20_3%20%2B%20_4%20%2B%20_5%3B%0A%20%20%20%20%7D%0A%20%20%20%20var%20word_1%20%3D%20cruel%28%2F*%20fill%20this%20in%20*%2F%29%3B%0A%0A%20%20%20%20function%20ulcer%28_1%2C%20_2%2C%20_3%2C%20_4%2C%20_5%29%20%7B%0A%20%20%20%20%20%20return%20_1%20%2B%20_2%20%2B%20_3%20%2B%20_4%20%2B%20_5%3B%0A%20%20%20%20%7D%0A%20%20%20%20var%20word_2%20%3D%20ulcer%28%2F*%20fill%20this%20in%20*%2F%29%3B%0A%0A%20%20%20%20var%20result%20%3D%20word_1%20%2B%20%22%20%22%20%2B%20word_2%3B%0A%20%20%20%20return%20result%3B%0A%20%20%7D%0A%20%20const%20return_val%20%3D%20sentence%28%22e%22%2C%20%22l%22%2C%20%22u%22%2C%20%22c%22%2C%20%22r%22%29%3B%0A%20%20console.assert%28return_val%20%3D%3D%3D%20\'cruel%20ulcer\'%2C%20%226%3A%20return_val%20%3D%3D%3D%20%22%20%2B%20return_val%29%3B%0A%7D%3B&curInstr=0&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)  
+[on pytut](http://www.pythontutor.com/live.html#code=function%20sentence%28_1,%20_2,%20_3,%20_4,%20_5%29%20%7B%20%0A%0A%20%20function%20cruel%28_v,%20_w,%20_x,%20_y,%20_z%29%20%7B%0A%20%20%20%20return%20_v%20%2B%20_w%20%2B%20_x%20%2B%20_y%20%2B%20_z%3B%0A%20%20%7D%0A%20%20var%20word_1%20%3D%20cruel%28/*%20fill%20this%20in%20*/%29%3B%0A%0A%20%20function%20ulcer%28_v,%20_w,%20_x,%20_y,%20_z%29%20%7B%0A%20%20%20%20return%20_v%20%2B%20_w%20%2B%20_x%20%2B%20_y%20%2B%20_z%3B%0A%20%20%7D%0A%20%20var%20word_2%20%3D%20ulcer%28/*%20fill%20this%20in%20*/%29%3B%0A%0A%20%20var%20result%20%3D%20word_1%20%2B%20%22%20%22%20%2B%20word_2%3B%0A%20%20return%20result%3B%0A%7D%0Aconst%20return_val%20%3D%20sentence%28%22e%22,%20%22l%22,%20%22u%22,%20%22c%22,%20%22r%22%29%3B%0Aconsole.assert%28return_val%20%3D%3D%3D%20'cruel%20ulcer',%20%226%3A%20return_val%20%3D%3D%3D%20%22%20%2B%20return_val%29%3B&cumulative=false&curInstr=11&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)  
 ```js
 { // 6 -> cruel ulcer
   function sentence(_1, _2, _3, _4, _5) { 
 
-    function cruel(_1, _2, _3, _4, _5) {
-      return _1 + _2 + _3 + _4 + _5;
+    function cruel(_v, _w, _x, _y, _z) {
+      return _v + _w + _x + _y + _z;
     }
     var word_1 = cruel(/* fill this in */);
 
-    function ulcer(_1, _2, _3, _4, _5) {
-      return _1 + _2 + _3 + _4 + _5;
+    function ulcer(_v, _w, _x, _y, _z) {
+      return _v + _w + _x + _y + _z;
     }
     var word_2 = ulcer(/* fill this in */);
 
@@ -285,18 +285,18 @@ console.assert(return_val === 'space capes', "3: return_val === " + return_val);
 
 ### 7
 
-[on pytut](http://www.pythontutor.com/javascript.html#code=function%20sentence%28_1%2C%20_2%2C%20_3%2C%20_4%2C%20_5%29%20%7B%0A%0A%20%20function%20cruel%28_1%2C%20_2%2C%20_3%2C%20_4%2C%20_5%29%20%7B%0A%20%20%20%20return%20_3%20%2B%20_5%20%2B%20_2%20%2B%20_1%20%2B%20_4%3B%0A%20%20%7D%0A%20%20var%20word_1%20%3D%20cruel%28%2F*%20fill%20this%20in%20*%2F%29%3B%0A%0A%20%20function%20ulcer%28_1%2C%20_2%2C%20_3%2C%20_4%2C%20_5%29%20%7B%0A%20%20%20%20return%20_5%20%2B%20_2%20%2B%20_4%20%2B%20_3%20%2B%20_1%3B%0A%20%20%7D%0A%20%20var%20word_2%20%3D%20ulcer%28%2F*%20fill%20this%20in%20*%2F%29%3B%0A%0A%20%20var%20result%20%3D%20word_1%20%2B%20%22%20%22%20%2B%20word_2%3B%0A%20%20return%20result%3B%0A%7D%0Aconst%20return_val%20%3D%20sentence%28%22e%22%2C%20%22l%22%2C%20%22u%22%2C%20%22c%22%2C%20%22r%22%29%3B%0Aconsole.assert%28return_val%20%3D%3D%3D%20\'cruel%20ulcer\'%2C%20%227%3A%20return_val%20%3D%3D%3D%20%22%20%2B%20return_val%29%3B&curInstr=0&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)  
+[on pytut](http://www.pythontutor.com/live.html#code=function%20sentence%28_1,%20_2,%20_3,%20_4,%20_5%29%20%7B%20%0A%0A%20%20function%20cruel%28_v,%20_w,%20_x,%20_y,%20_z%29%20%7B%0A%20%20%20%20return%20_x%20%2B%20_z%20%2B%20_w%20%2B%20_v%20%2B%20_y%3B%0A%20%20%7D%0A%20%20var%20word_1%20%3D%20cruel%28/*%20fill%20this%20in%20*/%29%3B%0A%0A%20%20function%20ulcer%28_v,%20_w,%20_x,%20_y,%20_z%29%20%7B%0A%20%20%20%20return%20_z%20%2B%20_w%20%2B%20_y%20%2B%20_x%20%2B%20_v%3B%0A%20%20%7D%0A%20%20var%20word_2%20%3D%20ulcer%28/*%20fill%20this%20in%20*/%29%3B%0A%0A%20%20var%20result%20%3D%20word_1%20%2B%20%22%20%22%20%2B%20word_2%3B%0A%20%20return%20result%3B%0A%7D%0Aconst%20return_val%20%3D%20sentence%28%22e%22,%20%22l%22,%20%22u%22,%20%22c%22,%20%22r%22%29%3B%0Aconsole.assert%28return_val%20%3D%3D%3D%20'cruel%20ulcer',%20%227%3A%20return_val%20%3D%3D%3D%20%22%20%2B%20return_val%29%3B&cumulative=false&curInstr=11&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)  
 ```js
 { // 7 -> cruel ulcer
   function sentence(_1, _2, _3, _4, _5) { 
 
-    function cruel(_1, _2, _3, _4, _5) {
-      return _3 + _5 + _2 + _1 + _4;
+    function cruel(_v, _w, _x, _y, _z) {
+      return _x + _z + _w + _v + _y;
     }
     var word_1 = cruel(/* fill this in */);
 
-    function ulcer(_1, _2, _3, _4, _5) {
-      return _5 + _2 + _4 + _3 + _1;
+    function ulcer(_v, _w, _x, _y, _z) {
+      return _z + _w + _y + _x + _v;
     }
     var word_2 = ulcer(/* fill this in */);
 
