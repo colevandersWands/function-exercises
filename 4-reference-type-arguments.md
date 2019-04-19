@@ -180,6 +180,8 @@ not the best choice, it can be much more difficult to think about and debug.
 {
   function start_new_array(arr) {
     // write this by building a new array from scratch
+    // the paramenter should only be used on the right side of =
+    // the new one should only be used on the left side of =
   }
 
   const array = ['a', 'b'];
@@ -217,6 +219,8 @@ not the best choice, it can be much more difficult to think about and debug.
 {
   function start_new_object(obj) {
     // write this by building a new object from scratch
+    // the paramenter should only be used on the right side of =
+    // the new one should only be used on the left side of =
   }
 
   const object = {a: 1, b: 2};
