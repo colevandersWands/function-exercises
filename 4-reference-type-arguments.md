@@ -122,7 +122,7 @@ preferred method, the logic is usually much simpler to follow.
 
 ### by making a copy
  
-not the best choice, it can be much more difficult to think about.   
+not the best choice, it can be much more difficult to think about and debug.   
 [on pytut](http://www.pythontutor.com/live.html#code=//%20make%20a%20copy%20of%20the%20argument%0A//%20modify%20it%20direclty%0Afunction%20reverse_a_new_one%28arr%29%20%7B%0A%20%20var%20arr_strified%20%3D%20JSON.stringify%28arr%29%3B%0A%20%20var%20copy%20%3D%20JSON.parse%28arr_strified%29%3B%0A%20%20var%20last_index%20%3D%20copy.length%20-%201%0A%20%20for%20%28let%20i%20%3D%20last_index%3B%20i%20%3E%3D%20last_index%20/%202%3B%20i--%29%20%7B%0A%20%20%20%20const%20temp%20%3D%20copy%5Bi%5D%3B%0A%20%20%20%20copy%5Bi%5D%20%3D%20copy%5Blast_index%20-%20i%5D%3B%0A%20%20%20%20copy%5Blast_index%20-%20i%5D%20%3D%20temp%3B%0A%20%20%7D%0A%20%20return%20copy%3B%0A%7D%0A%0Aconst%20backwards%20%3D%20%5B5,%204,%203,%202,%201%5D%3B%0Aconst%20reversed%20%3D%20reverse_a_new_one%28backwards%29%3B%0A%0Aconst%20reversed_strified%20%3D%20JSON.stringify%28reversed%29%3B%0Aconsole.assert%28reversed_strified%20%3D%3D%3D%20'%5B1,2,3,4,5%5D'%29%3B&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
 ```js
 {
