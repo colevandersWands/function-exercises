@@ -25,42 +25,61 @@ These examples and exercises will help you understand _side effects_ and how to 
 ## Side Effects
 
 ### with return value
-[on pytut](http://www.pythontutor.com/live.html#code=function%20side_effector%28ref_type,%20key%29%20%7B%0A%20%20ref_type%5Bkey%5D%20%3D%20'side%20effect!'%3B%0A%20%20return%20ref_type%3B%0A%7D%0A%0Aconst%20arr%20%3D%20%5B'a'%5D%3B%0Aconst%20arr_ret_val%20%3D%20side_effector%28arr,%201%29%3B%0Aconsole.assert%28arr%5B1%5D%20/*%20fill%20this%20*/%20arr_ret_val%5B1%5D%29%3B%0A%0A%0Aconst%20obj%20%3D%20%7Ba%3A%201%7D%3B%0Aconst%20obj_ret_val%20%3D%20side_effector%28obj,%20'b'%29%3B%0Aconsole.assert%28obj.b%20/*%20fill%20this%20*/%20obj_ret_val.b%29%3B&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
+[on pytut](http://www.pythontutor.com/live.html#code=function%20no_side_effects%28param%29%20%7B%0A%20%20return%20%22%22%20%2B%20param%3B%0A%7D%0A%0Aconst%20arg%20%3D%203%3B%0Aconst%20ret_val%20%3D%20no_side_effects%28arg%29%3B%0A%0A//%20----%0A%0Afunction%20side_effector%28ref_type,%20key%29%20%7B%0A%20%20ref_type%5Bkey%5D%20%3D%20'side%20effect!'%3B%0A%20%20return%20ref_type%3B%0A%7D%0A%0Aconst%20arr%20%3D%20%5B'a'%5D%3B%0Aconst%20arr_ret_val%20%3D%20side_effector%28arr,%201%29%3B%0Aconsole.assert%28arr%5B1%5D%20%3D%3D%3D%20arr_ret_val%5B1%5D%29%3B%0A%0A%0Aconst%20obj%20%3D%20%7Ba%3A%201%7D%3B%0Aconst%20obj_ret_val%20%3D%20side_effector%28obj,%20'b'%29%3B%0Aconsole.assert%28obj.b%20%3D%3D%3D%20obj_ret_val.b%29%3B&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
 ```js
 {
-  function side_effector(ref_type, key) {
-    ref_type[key] = 'side effect!';
-    return ref_type;
-  }
+   function no_side_effects(param) {
+     return "" + param;
+   }
 
-  const arr = ['a'];
-  const arr_ret_val = side_effector(arr, 1);
-  console.assert(arr[1] /* fill this */ arr_ret_val[1]);
+   const arg = 3;
+   const ret_val = no_side_effects(arg);
+
+   // ----
+
+   function side_effector(ref_type, key) {
+     ref_type[key] = 'side effect!';
+     return ref_type;
+   }
+
+   const arr = ['a'];
+   const arr_ret_val = side_effector(arr, 1);
+   console.assert(arr[1] === arr_ret_val[1]);
 
 
-  const obj = {a: 1};
-  const obj_ret_val = side_effector(obj, 'b');
-  console.assert(obj.b /* fill this */ obj_ret_val.b);
+   const obj = {a: 1};
+   const obj_ret_val = side_effector(obj, 'b');
+   console.assert(obj.b === obj_ret_val.b);
 }
 ```
 
 
 ### without return value   
-[on pytut](http://www.pythontutor.com/live.html#code=function%20side_effector%28ref_type,%20key%29%20%7B%0A%20%20ref_type%5Bkey%5D%20%3D%20'side%20effect!'%3B%0A%7D%0A%0Aconst%20arr%20%3D%20%5B'a'%5D%3B%0Aside_effector%28arr,%201%29%3B%0Aconsole.assert%28arr%5B1%5D%20/*%20fill%20this%20*/%20'side%20effect!'%29%3B%0A%0A%0Aconst%20obj%20%3D%20%7Ba%3A%201%7D%3B%0Aside_effector%28obj,%20'b'%29%3B%0Aconsole.assert%28obj.b%20/*%20fill%20this%20*/%20'side%20effect!'%29%3B&cumulative=false&curInstr=10&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
+[on pytut](http://www.pythontutor.com/live.html#code=function%20no_side_effects%28param%29%20%7B%0A%20%20const%20result%20%3D%20%22%22%20%2B%20param%3B%0A%7D%0A%0Aconst%20arg%20%3D%203%3B%0Ano_side_effects%28arg%29%3B%0A%0A%0A//%20---%0A%0Afunction%20side_effector%28ref_type,%20key%29%20%7B%0A%20%20ref_type%5Bkey%5D%20%3D%20'side%20effect!'%3B%0A%7D%0A%0Aconst%20arr%20%3D%20%5B'a'%5D%3B%0Aside_effector%28arr,%201%29%3B%0Aconsole.assert%28arr%5B1%5D%20%3D%3D%3D%20'side%20effect!'%29%3B%0A%0A%0Aconst%20obj%20%3D%20%7Ba%3A%201%7D%3B%0Aside_effector%28obj,%20'b'%29%3B%0Aconsole.assert%28obj.b%20%3D%3D%3D%20'side%20effect!'%29%3B&cumulative=false&curInstr=11&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
 ```js
 {
-  function side_effector(ref_type, key) {
-    ref_type[key] = 'side effect!';
-  }
+   function no_side_effects(param) {
+     const result = "" + param;
+   }
 
-  const arr = ['a'];
-  side_effector(arr, 1);
-  console.assert(arr[1] /* fill this */ 'side effect!');
+   const arg = 3;
+   no_side_effects(arg);
 
 
-  const obj = {a: 1};
-  side_effector(obj, 'b');
-  console.assert(obj.b /* fill this */ 'side effect!');
+   // ---
+
+   function side_effector(ref_type, key) {
+     ref_type[key] = 'side effect!';
+   }
+
+   const arr = ['a'];
+   side_effector(arr, 1);
+   console.assert(arr[1] === 'side effect!');
+
+
+   const obj = {a: 1};
+   side_effector(obj, 'b');
+   console.assert(obj.b === 'side effect!');
 }
 ```
 
