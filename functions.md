@@ -19,6 +19,7 @@ some exercises to help you understand functions:
     * [number 6](#6)
     * [number 7](#7)
     * [number 8](#8)
+* [resources](#resources)
 
 ---
 
@@ -200,6 +201,12 @@ some exercises to help you understand functions:
    console.assert(return_val === "yxz", "8: return_val === " + return_val);
 }
 ```
+
+---
+
+## Resources
+
+* [pythontutor video](https://www.youtube.com/watch?v=bJUmxDsaduY&list=PLzV58Zm8FuBJFfQN5il3ujx6FDAY8Ds3u&index=6)
 
 ___
 ___
