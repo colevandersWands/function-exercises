@@ -25,42 +25,61 @@ These examples and exercises will help you understand _side effects_ and how to 
 ## Side Effects
 
 ### with return value
-[on pytut](http://www.pythontutor.com/live.html#code=function%20side_effector%28ref_type,%20key%29%20%7B%0A%20%20ref_type%5Bkey%5D%20%3D%20'side%20effect!'%3B%0A%20%20return%20ref_type%3B%0A%7D%0A%0Aconst%20arr%20%3D%20%5B'a'%5D%3B%0Aconst%20arr_ret_val%20%3D%20side_effector%28arr,%201%29%3B%0Aconsole.assert%28arr%5B1%5D%20/*%20fill%20this%20*/%20arr_ret_val%5B1%5D%29%3B%0A%0A%0Aconst%20obj%20%3D%20%7Ba%3A%201%7D%3B%0Aconst%20obj_ret_val%20%3D%20side_effector%28obj,%20'b'%29%3B%0Aconsole.assert%28obj.b%20/*%20fill%20this%20*/%20obj_ret_val.b%29%3B&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
+[on pytut](http://www.pythontutor.com/live.html#code=function%20no_side_effects%28param%29%20%7B%0A%20%20return%20%22%22%20%2B%20param%3B%0A%7D%0A%0Aconst%20arg%20%3D%203%3B%0Aconst%20ret_val%20%3D%20no_side_effects%28arg%29%3B%0A%0A//%20----%0A%0Afunction%20side_effector%28ref_type,%20key%29%20%7B%0A%20%20ref_type%5Bkey%5D%20%3D%20'side%20effect!'%3B%0A%20%20return%20ref_type%3B%0A%7D%0A%0Aconst%20arr%20%3D%20%5B'a'%5D%3B%0Aconst%20arr_ret_val%20%3D%20side_effector%28arr,%201%29%3B%0Aconsole.assert%28arr%5B1%5D%20%3D%3D%3D%20arr_ret_val%5B1%5D%29%3B%0A%0A%0Aconst%20obj%20%3D%20%7Ba%3A%201%7D%3B%0Aconst%20obj_ret_val%20%3D%20side_effector%28obj,%20'b'%29%3B%0Aconsole.assert%28obj.b%20%3D%3D%3D%20obj_ret_val.b%29%3B&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
 ```js
 {
-  function side_effector(ref_type, key) {
-    ref_type[key] = 'side effect!';
-    return ref_type;
-  }
+   function no_side_effects(param) {
+     return "" + param;
+   }
 
-  const arr = ['a'];
-  const arr_ret_val = side_effector(arr, 1);
-  console.assert(arr[1] /* fill this */ arr_ret_val[1]);
+   const arg = 3;
+   const ret_val = no_side_effects(arg);
+
+   // ----
+
+   function side_effector(ref_type, key) {
+     ref_type[key] = 'side effect!';
+     return ref_type;
+   }
+
+   const arr = ['a'];
+   const arr_ret_val = side_effector(arr, 1);
+   console.assert(arr[1] === arr_ret_val[1]);
 
 
-  const obj = {a: 1};
-  const obj_ret_val = side_effector(obj, 'b');
-  console.assert(obj.b /* fill this */ obj_ret_val.b);
+   const obj = {a: 1};
+   const obj_ret_val = side_effector(obj, 'b');
+   console.assert(obj.b === obj_ret_val.b);
 }
 ```
 
 
 ### without return value   
-[on pytut](http://www.pythontutor.com/live.html#code=function%20side_effector%28ref_type,%20key%29%20%7B%0A%20%20ref_type%5Bkey%5D%20%3D%20'side%20effect!'%3B%0A%7D%0A%0Aconst%20arr%20%3D%20%5B'a'%5D%3B%0Aside_effector%28arr,%201%29%3B%0Aconsole.assert%28arr%5B1%5D%20/*%20fill%20this%20*/%20'side%20effect!'%29%3B%0A%0A%0Aconst%20obj%20%3D%20%7Ba%3A%201%7D%3B%0Aside_effector%28obj,%20'b'%29%3B%0Aconsole.assert%28obj.b%20/*%20fill%20this%20*/%20'side%20effect!'%29%3B&cumulative=false&curInstr=10&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
+[on pytut](http://www.pythontutor.com/live.html#code=function%20no_side_effects%28param%29%20%7B%0A%20%20const%20result%20%3D%20%22%22%20%2B%20param%3B%0A%7D%0A%0Aconst%20arg%20%3D%203%3B%0Ano_side_effects%28arg%29%3B%0A%0A%0A//%20---%0A%0Afunction%20side_effector%28ref_type,%20key%29%20%7B%0A%20%20ref_type%5Bkey%5D%20%3D%20'side%20effect!'%3B%0A%7D%0A%0Aconst%20arr%20%3D%20%5B'a'%5D%3B%0Aside_effector%28arr,%201%29%3B%0Aconsole.assert%28arr%5B1%5D%20%3D%3D%3D%20'side%20effect!'%29%3B%0A%0A%0Aconst%20obj%20%3D%20%7Ba%3A%201%7D%3B%0Aside_effector%28obj,%20'b'%29%3B%0Aconsole.assert%28obj.b%20%3D%3D%3D%20'side%20effect!'%29%3B&cumulative=false&curInstr=11&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
 ```js
 {
-  function side_effector(ref_type, key) {
-    ref_type[key] = 'side effect!';
-  }
+   function no_side_effects(param) {
+     const result = "" + param;
+   }
 
-  const arr = ['a'];
-  side_effector(arr, 1);
-  console.assert(arr[1] /* fill this */ 'side effect!');
+   const arg = 3;
+   no_side_effects(arg);
 
 
-  const obj = {a: 1};
-  side_effector(obj, 'b');
-  console.assert(obj.b /* fill this */ 'side effect!');
+   // ---
+
+   function side_effector(ref_type, key) {
+     ref_type[key] = 'side effect!';
+   }
+
+   const arr = ['a'];
+   side_effector(arr, 1);
+   console.assert(arr[1] === 'side effect!');
+
+
+   const obj = {a: 1};
+   side_effector(obj, 'b');
+   console.assert(obj.b === 'side effect!');
 }
 ```
 
@@ -122,7 +141,7 @@ preferred method, the logic is usually much simpler to follow.
 
 ### by making a copy
  
-not the best choice, it can be much more difficult to think about.   
+not the best choice, it can be much more difficult to think about and debug.   
 [on pytut](http://www.pythontutor.com/live.html#code=//%20make%20a%20copy%20of%20the%20argument%0A//%20modify%20it%20direclty%0Afunction%20reverse_a_new_one%28arr%29%20%7B%0A%20%20var%20arr_strified%20%3D%20JSON.stringify%28arr%29%3B%0A%20%20var%20copy%20%3D%20JSON.parse%28arr_strified%29%3B%0A%20%20var%20last_index%20%3D%20copy.length%20-%201%0A%20%20for%20%28let%20i%20%3D%20last_index%3B%20i%20%3E%3D%20last_index%20/%202%3B%20i--%29%20%7B%0A%20%20%20%20const%20temp%20%3D%20copy%5Bi%5D%3B%0A%20%20%20%20copy%5Bi%5D%20%3D%20copy%5Blast_index%20-%20i%5D%3B%0A%20%20%20%20copy%5Blast_index%20-%20i%5D%20%3D%20temp%3B%0A%20%20%7D%0A%20%20return%20copy%3B%0A%7D%0A%0Aconst%20backwards%20%3D%20%5B5,%204,%203,%202,%201%5D%3B%0Aconst%20reversed%20%3D%20reverse_a_new_one%28backwards%29%3B%0A%0Aconst%20reversed_strified%20%3D%20JSON.stringify%28reversed%29%3B%0Aconsole.assert%28reversed_strified%20%3D%3D%3D%20'%5B1,2,3,4,5%5D'%29%3B&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
 ```js
 {
@@ -180,6 +199,8 @@ not the best choice, it can be much more difficult to think about.
 {
   function start_new_array(arr) {
     // write this by building a new array from scratch
+    // the paramenter should only be used on the right side of =
+    // the new one should only be used on the left side of =
   }
 
   const array = ['a', 'b'];
@@ -217,6 +238,8 @@ not the best choice, it can be much more difficult to think about.
 {
   function start_new_object(obj) {
     // write this by building a new object from scratch
+    // the paramenter should only be used on the right side of =
+    // the new one should only be used on the left side of =
   }
 
   const object = {a: 1, b: 2};
