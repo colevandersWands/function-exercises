@@ -8,11 +8,11 @@ some exercises to help you understand functions:
 * Lexical Scope
 * Return Values
 * tracing values through function calls. 
-    1. stored in a variable
+    1. stored in a global variable
     1. passed as argument to a function call
     1. available as a parameter in the new frame
-    1. returned from the frame as a return value
-    1. captured in a variable
+    1. returned as part of a return value
+    1. captured in a new global variable
 
 ### Index
 * [completed example](#completed-example)
