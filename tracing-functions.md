@@ -9,6 +9,12 @@ some exercises to help you understand functions:
 * Return Values
 
 And to help you learn how to trace values as they are passed through functions!  This skill is absolutely fundamental to understanding programming. It can be helpful to trace values _backwards_ from the assertion to the variables.  Like so:
+1. stored in a global variable
+1. passed as argument to a function call
+1. available as a parameter in the new frame
+1. returned as part of a return value
+1. captured in a new global variable
+Or you may find it helpful to work backwards:
 1. Pick an index in the expected value string (in the assert).
 1. Find that same position in the concatinated return value (inside the function body).
 1. Find which in position that variable is declared as a paramter (inside the parenthesis of the function declaration)
