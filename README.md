@@ -6,7 +6,7 @@ Some exercises & resources to help understand functions
 
 ## Exercises
 
-1. [functions](./functions.md)
+1. [tracing functions](./tracing-functions.md)
 1. [turtle shuffle](./turtle-shuffle.md)
 1. function composition
 1. [callstack](./callstack.md)
