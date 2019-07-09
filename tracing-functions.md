@@ -45,6 +45,7 @@ If the first value and the final values match, they're good to go!
     * [number 11](#11)
     * [number 12](#12)
     * [number 13](#13)
+    * [number 14](#14)
 * [resources](#resources)
 
 ---
@@ -416,6 +417,37 @@ If the first value and the final values match, they're good to go!
   console.assert(return_val === "zywx", "13 c");
 } 
 ```
+
+---
+### 14
+
+```js
+{ console.log(14); // do what needs to be done
+
+  function f(param_1, param_2, param_3, param_4) {
+    var _ = param_3; 
+    param_3 = param_2;
+    param_2 = param_4;
+    param_4 = _;
+    var result = param_4 + param_2 + param_3 + param_1;
+    return result;
+  };
+
+  let arg_1 = "", arg_2 = "", arg_3 = "", arg_4 = ""; // <--
+  let return_val = f(arg_1, arg_2, arg_3, arg_4);
+  console.assert(return_val === "xyzw", "14 a");
+
+  arg_1 = "z", arg_2 = "w", arg_3 = "y", arg_4 = "x";
+  return_val = f(arg_3, arg_1, arg_4, arg_2);
+  console.assert(return_val === "", "14 b");          // <--
+
+  arg_1 = "z", arg_2 = "w", arg_3 = "y", arg_4 = "x";
+  return_val = f();                                   // <--
+  console.assert(return_val === "zywx", "14 c");
+} 
+```
+
+[TOP](#tracing-functions)
 
 ---
 
