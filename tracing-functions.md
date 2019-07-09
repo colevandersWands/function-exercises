@@ -18,7 +18,7 @@ And to help you learn how to trace values as they are passed through functions! 
 Or you may find it helpful to work backwards:
 1. Pick an index in the expected value string (in the assert).
 1. Find that same position in the concatinated return value (inside the function body).
-1. Find which in position that variable is declared as a paramter (inside the parenthesis of the function declaration)
+1. Find in which position that variable is declared as a paramter (inside the parenthesis of the function declaration)
 1. Find which argument is located in that position of the function call.
 1. Find the value assigned to that variable
 If the first value and the final values match, they're good to go!
