@@ -118,11 +118,11 @@ These examples and exercises will help you understand _side effects_ and how to 
 ### by starting a new one
 
 preferred method, the logic is usually much simpler to follow.  
-[on pytut](http://www.pythontutor.com/live.html#code=//%20make%20a%20new%20empty%20array%0A//%20fill%20it%20with%20the%20new,%20correct,%20values%0Afunction%20reverse_a_new_one%28arr%29%20%7B%0A%20%20var%20new_arr%20%3D%20%5B%5D%3B%0A%20%20for%20%28let%20i%20%3D%20arr.length%20-%201%3B%20i%20%3E%3D%200%3B%20i--%29%20%7B%0A%20%20%20%20new_arr.push%28arr%5Bi%5D%29%3B%0A%20%20%7D%0A%20%20return%20new_arr%3B%0A%7D%0A%0Aconst%20backwards%20%3D%20%5B3,%202,%201%5D%3B%0Aconst%20reversed%20%3D%20reverse_a_new_one%28backwards%29%3B%0A%0Aconst%20reversed_strified%20%3D%20JSON.stringify%28reversed%29%3B%0Aconsole.assert%28reversed_strified%20%3D%3D%3D%20'%5B1,2,3%5D'%29%3B&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)  
+[on pytut](http://www.pythontutor.com/live.html#code=//%20make%20a%20new%20empty%20array%0A//%20fill%20it%20with%20the%20new,%20correct,%20values%0Afunction%20reverse_a_new_one%28arr%29%20%7B%0A%20%20var%20new_arr%20%3D%20%5B%5D%3B%0A%20%20for%20%28let%20i%20%3D%20arr.length%20-%201%3B%20i%20%3E%3D%200%3B%20i--%29%20%7B%0A%20%20%20%20new_arr.push%28arr%5Bi%5D%29%3B%0A%20%20%7D%0A%20%20return%20new_arr%3B%0A%7D%0A%0Aconst%20backwards_1%20%3D%20%5B3,%202,%201%5D%3B%0Aconst%20reversed_1%20%3D%20reverse_a_new_one%28backwards_1%29%3B%0A%0Aconst%20reversed_strified_1%20%3D%20JSON.stringify%28reversed_1%29%3B%0Aconsole.assert%28reversed_strified_1%20%3D%3D%3D%20'%5B1,2,3%5D'%29%3B%0A%0Aconst%20backwards_2%20%3D%20%5B%22c%22,%20%22b%22,%20%22a%22%5D%3B%0Aconst%20reversed_2%20%3D%20reverse_a_new_one%28backwards_2%29%3B%0A%0Aconst%20reversed_strified_2%20%3D%20JSON.stringify%28reversed_2%29%3B%0Aconsole.assert%28reversed_strified_2%20%3D%3D%3D%20'%5B%22a%22,%22b%22,%22c%22%5D'%29%3B&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)  
 ```js
 {
   // make a new empty array
-  // fill it with the new, correct, values
+  // fill it with the new, correct values
   function reverse_a_new_one(arr) {
     var new_arr = [];
     for (let i = arr.length - 1; i >= 0; i--) {
@@ -131,18 +131,24 @@ preferred method, the logic is usually much simpler to follow.
     return new_arr;
   }
 
-  const backwards = [3, 2, 1];
-  const reversed = reverse_a_new_one(backwards);
+  const backwards_1 = [3, 2, 1];
+  const reversed_1 = reverse_a_new_one(backwards_1);
 
-  const reversed_strified = JSON.stringify(reversed);
-  console.assert(reversed_strified === '[1,2,3]');
+  const reversed_strified_1 = JSON.stringify(reversed_1);
+  console.assert(reversed_strified_1 === '[1,2,3]');
+  
+  const backwards_2 = ["c", "b", "a"];
+  const reversed_2 = reverse_a_new_one(backwards_2);
+
+  const reversed_strified_2 = JSON.stringify(reversed_2);
+  console.assert(reversed_strified_2 === '["a","b","c"]');
 }
 ```
 
 ### by making a copy
  
 not the best choice, it can be much more difficult to think about and debug.   
-[on pytut](http://www.pythontutor.com/live.html#code=//%20make%20a%20copy%20of%20the%20argument%0A//%20modify%20it%20direclty%0Afunction%20reverse_a_new_one%28arr%29%20%7B%0A%20%20var%20arr_strified%20%3D%20JSON.stringify%28arr%29%3B%0A%20%20var%20copy%20%3D%20JSON.parse%28arr_strified%29%3B%0A%20%20var%20last_index%20%3D%20copy.length%20-%201%0A%20%20for%20%28let%20i%20%3D%20last_index%3B%20i%20%3E%3D%20last_index%20/%202%3B%20i--%29%20%7B%0A%20%20%20%20const%20temp%20%3D%20copy%5Bi%5D%3B%0A%20%20%20%20copy%5Bi%5D%20%3D%20copy%5Blast_index%20-%20i%5D%3B%0A%20%20%20%20copy%5Blast_index%20-%20i%5D%20%3D%20temp%3B%0A%20%20%7D%0A%20%20return%20copy%3B%0A%7D%0A%0Aconst%20backwards%20%3D%20%5B5,%204,%203,%202,%201%5D%3B%0Aconst%20reversed%20%3D%20reverse_a_new_one%28backwards%29%3B%0A%0Aconst%20reversed_strified%20%3D%20JSON.stringify%28reversed%29%3B%0Aconsole.assert%28reversed_strified%20%3D%3D%3D%20'%5B1,2,3,4,5%5D'%29%3B&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
+[on pytut](http://www.pythontutor.com/live.html#code=%20%20//%20make%20a%20copy%20of%20the%20argument%0A%20%20//%20modify%20it%20direclty%0A%20%20function%20reverse_a_new_one%28arr%29%20%7B%0A%20%20%20%20var%20arr_strified%20%3D%20JSON.stringify%28arr%29%3B%0A%20%20%20%20var%20copy%20%3D%20JSON.parse%28arr_strified%29%3B%0A%20%20%20%20var%20last_index%20%3D%20copy.length%20-%201%0A%20%20%20%20for%20%28let%20i%20%3D%20last_index%3B%20i%20%3E%3D%20last_index%20/%202%3B%20i--%29%20%7B%0A%20%20%20%20%20%20const%20temp%20%3D%20copy%5Bi%5D%3B%0A%20%20%20%20%20%20copy%5Bi%5D%20%3D%20copy%5Blast_index%20-%20i%5D%3B%0A%20%20%20%20%20%20copy%5Blast_index%20-%20i%5D%20%3D%20temp%3B%0A%20%20%20%20%7D%0A%20%20%20%20return%20copy%3B%0A%20%20%7D%0A%0A%20%20const%20backwards_1%20%3D%20%5B3,%202,%201%5D%3B%0A%20%20const%20reversed_1%20%3D%20reverse_a_new_one%28backwards_1%29%3B%0A%0A%20%20const%20reversed_strified_1%20%3D%20JSON.stringify%28reversed_1%29%3B%0A%20%20console.assert%28reversed_strified_1%20%3D%3D%3D%20'%5B1,2,3%5D'%29%3B%0A%20%20%0A%20%20const%20backwards_2%20%3D%20%5B%22c%22,%20%22b%22,%20%22a%22%5D%3B%0A%20%20const%20reversed_2%20%3D%20reverse_a_new_one%28backwards_2%29%3B%0A%0A%20%20const%20reversed_strified_2%20%3D%20JSON.stringify%28reversed_2%29%3B%0A%20%20console.assert%28reversed_strified_2%20%3D%3D%3D%20'%5B%22a%22,%22b%22,%22c%22%5D'%29%3B&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
 ```js
 {
   // make a copy of the argument
@@ -159,11 +165,17 @@ not the best choice, it can be much more difficult to think about and debug.
     return copy;
   }
 
-  const backwards = [5, 4, 3, 2, 1];
-  const reversed = reverse_a_new_one(backwards);
+  const backwards_1 = [3, 2, 1];
+  const reversed_1 = reverse_a_new_one(backwards_1);
 
-  const reversed_strified = JSON.stringify(reversed);
-  console.assert(reversed_strified === '[1,2,3,4,5]');
+  const reversed_strified_1 = JSON.stringify(reversed_1);
+  console.assert(reversed_strified_1 === '[1,2,3]');
+  
+  const backwards_2 = ["c", "b", "a"];
+  const reversed_2 = reverse_a_new_one(backwards_2);
+
+  const reversed_strified_2 = JSON.stringify(reversed_2);
+  console.assert(reversed_strified_2 === '["a","b","c"]');
 }
 ```
 
@@ -175,26 +187,32 @@ not the best choice, it can be much more difficult to think about and debug.
 
 ### copy an array
 
-[on pytut](http://www.pythontutor.com/live.html#code=function%20copy_array%28arr%29%20%7B%0A%20%20//%20write%20this%20using%20JSON.stringify%20%26%20.parse%0A%7D%0A%0Aconst%20array%20%3D%20%5B'a',%20'b'%5D%3B%0Aconst%20by_copy%20%3D%20copy_array%28array%29%3B%0A%0Aconsole.assert%28array%5B0%5D%20%3D%3D%3D%20by_copy%5B0%5D%29%3B%0Aconsole.assert%28array%5B1%5D%20%3D%3D%3D%20by_copy%5B1%5D%29%3B%0Aconsole.assert%28array%20!%3D%3D%20by_copy%29%3B&cumulative=false&curInstr=4&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
+[on pytut](http://www.pythontutor.com/live.html#code=&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
 ```js
 {
   function copy_array(arr) {
-    // write this using JSON.stringify & .parse
+    // write this
   }
 
   const array = ['a', 'b'];
   const by_copy = copy_array(array);
-
   console.assert(array[0] === by_copy[0]);
   console.assert(array[1] === by_copy[1]);
   console.assert(array !== by_copy);
+  
+  const array_2 = [3, 'b', null];
+  const by_copy_2 = copy_array(array_2);
+  console.assert(array_2[0] === by_copy_2[0]);
+  console.assert(array_2[1] === by_copy_2[1]);
+  console.assert(array_2 !== by_copy_2);
+     
 }
 ```
 
 
 ### start a new array
 
-[on pytut](http://www.pythontutor.com/live.html#code=function%20start_new_array%28arr%29%20%7B%0A%20%20//%20write%20this%20by%20building%20a%20new%20array%20from%20scratch%0A%7D%0A%0Aconst%20array%20%3D%20%5B'a',%20'b'%5D%3B%0Aconst%20by_new_start%20%3D%20start_new_array%28array%29%3B%0A%0Aconsole.assert%28array%5B0%5D%20%3D%3D%3D%20by_new_start%5B0%5D%29%3B%0Aconsole.assert%28array%5B1%5D%20%3D%3D%3D%20by_new_start%5B1%5D%29%3B%0Aconsole.assert%28array%20!%3D%3D%20by_new_start%29%3B&cumulative=false&curInstr=4&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
+[on pytut](http://www.pythontutor.com/live.html#code=&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
 ```js
 {
   function start_new_array(arr) {
@@ -204,50 +222,68 @@ not the best choice, it can be much more difficult to think about and debug.
   }
 
   const array = ['a', 'b'];
-  const by_new_start = start_new_array(array);
-
-  console.assert(array[0] === by_new_start[0]);
-  console.assert(array[1] === by_new_start[1]);
-  console.assert(array !== by_new_start);
+  const new_array = start_new_array(array);
+  console.assert(array[0] === new_array[0]);
+  console.assert(array[1] === new_array[1]);
+  console.assert(array !== new_array);
+  
+  const array_2 = [3, 'b', null];
+  const new_array_2 = start_new_array(array_2);
+  console.assert(array_2[0] === new_array_2[0]);
+  console.assert(array_2[1] === new_array_2[1]);
+  console.assert(array_2[2] === new_array_2[2]);
+  console.assert(array_2 !== new_array_2);
 }
 ```
 
 ### copy an object
 
-[on pytut](http://www.pythontutor.com/live.html#code=function%20copy_object%28obj%29%20%7B%0A%20%20//%20write%20this%20using%20JSON.stringify%20%26%20.parse%0A%7D%0A%0Aconst%20object%20%3D%20%7Ba%3A%201,%20b%3A%202%7D%3B%0Aconst%20by_copy%20%3D%20copy_object%28object%29%3B%0A%0Aconsole.assert%28object.a%20%3D%3D%3D%20by_copy.a%29%3B%0Aconsole.assert%28object%5B'b'%5D%20%3D%3D%3D%20by_copy%5B'b'%5D%29%3B%0Aconsole.assert%28object%20!%3D%3D%20by_copy%29%3B&cumulative=false&curInstr=4&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
+[on pytut](http://www.pythontutor.com/live.html#code=&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
 ```js
 {
   function copy_object(obj) {
-    // write this using JSON.stringify & .parse
+    // write this
   }
 
   const object = {a: 1, b: 2};
   const by_copy = copy_object(object);
-
   console.assert(object.a === by_copy.a);
   console.assert(object['b'] === by_copy['b']);
   console.assert(object !== by_copy);
+  
+  const object_2 = {x: 3, z: null, it: "ti"};
+  const by_copy_2 = copy_object(object_2);
+  console.assert(object_2.x === by_copy_2.x);
+  console.assert(object_2['z'] === by_copy_2['z']);
+  console.assert(object_2['it'] === by_copy_2.ti);
+  console.assert(object_2 !== by_copy_2);
 }
 ```
 
 
 ### start a new object
 
-[on pytut](http://www.pythontutor.com/live.html#code=function%20start_new_object%28obj%29%20%7B%0A%20%20//%20write%20this%20by%20building%20a%20new%20object%20from%20scratch%0A%7D%0A%0Aconst%20object%20%3D%20%7Ba%3A%201,%20b%3A%202%7D%3B%0Aconst%20by_new_start%20%3D%20start_new_object%28object%29%3B%0A%0Aconsole.assert%28object.a%20%3D%3D%3D%20by_new_start.a%29%3B%0Aconsole.assert%28object%5B'b'%5D%20%3D%3D%3D%20by_new_start%5B'b'%5D%29%3B%0Aconsole.assert%28object%20!%3D%3D%20by_new_start%29%3B&cumulative=false&curInstr=4&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
+[on pytut](http://www.pythontutor.com/live.html#code=&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
 ```js
 {
   function start_new_object(obj) {
     // write this by building a new object from scratch
     // the paramenter should only be used on the right side of =
     // the new one should only be used on the left side of =
-  }
-
+  } 
+  
   const object = {a: 1, b: 2};
-  const by_new_start = start_new_object(object);
-
-  console.assert(object.a === by_new_start.a);
-  console.assert(object['b'] === by_new_start['b']);
-  console.assert(object !== by_new_start);
+  const new_obj = start_new_object(object);
+  console.assert(object.a === new_obj.a);
+  console.assert(object['b'] === new_obj['b']);
+  console.assert(object !== new_obj);
+  
+  const object_2 = {x: 3, z: null, it: "ti"};
+  const new_obj_2 = start_new_object(object_2);
+  console.assert(object_2.x === new_obj_2.x);
+  console.assert(object_2['z'] === new_obj_2['z']);
+  console.assert(object_2['it'] === new_obj_2.ti);
+  console.assert(object_2 !== new_obj_2);
 }
 ```
 
