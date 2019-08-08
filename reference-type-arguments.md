@@ -17,7 +17,6 @@ These examples and exercises will help you understand _side effects_ and how to 
     * [copy an object](#copy-an-object)
     * [start a new object](#start-a-new-object)
 
-
 ---
 
 ## Examples to Study
@@ -255,7 +254,7 @@ not the best choice, it can be much more difficult to think about and debug.
   const by_copy_2 = copy_object(object_2);
   console.assert(object_2.x === by_copy_2.x);
   console.assert(object_2['z'] === by_copy_2['z']);
-  console.assert(object_2['it'] === by_copy_2.ti);
+  console.assert(object_2['it'] === by_copy_2.it);
   console.assert(object_2 !== by_copy_2);
 }
 ```
