@@ -281,7 +281,7 @@ not the best choice, it can be much more difficult to think about and debug.
   const new_obj_2 = start_new_object(object_2);
   console.assert(object_2.x === new_obj_2.x);
   console.assert(object_2['z'] === new_obj_2['z']);
-  console.assert(object_2['it'] === new_obj_2.ti);
+  console.assert(object_2['it'] === new_obj_2.it);
   console.assert(object_2 !== new_obj_2);
 }
 ```
